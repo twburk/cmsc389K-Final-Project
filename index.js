@@ -147,6 +147,8 @@ app.post('/api/activity', function(req, res){
         dressCode: dressC
     });
 
+    console.log(activity);
+
     activity.save(function(err){
         if(err) throw err;
         return res.send("Successfully inserted activity!");
