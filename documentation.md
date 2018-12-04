@@ -63,7 +63,7 @@ var options = {
 	      city : "Silver Springs",
 	      ageRequirement : "No",
 	      maxGroup : "25",
-	      dressCode : ['No Weapons", "No chains on jeans"]
+	      dressCode : ["No Weapons", "No chains"]
     } 
 };
 
