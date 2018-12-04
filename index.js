@@ -137,17 +137,17 @@ app.post('/activity', function(req, res){
 
 app.post('/api/activity', function(req, res){
     var dressC = req.body.dressCode;
-    //var dress = dressC.split(";");
+    var dress = dressC.split(";");
+
+    console.log()
 
     var activity = new Activity({
         name: req.body.name,
         city: req.body.city,
         ageRequirement: req.body.ageRequirement,
-        maxGroupCount: req.body.maxGroup,
-        dressCode: dressC
+        maxGroupCount: parseInt(req.body.maxGroup),
+        dressCode: dress
     });
-
-    console.log(activity);
 
     activity.save(function(err){
         if(err) throw err;
