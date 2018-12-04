@@ -22,16 +22,17 @@
     $('#search').on('keyup', function(e){
         $('#data').html("");
         var text = $(this).val();
-        var results = [];
         var res_html = "";
         App.activ.forEach(function(act){
             if(act.name.substring(0, text.length) == text){
-                results.push(act);
                 res_html += "<li>" + act.name + "</li>";
             }
         });
-
-        $('#data').html("<ol>" + res_html + "</ol>");
+        if(res_html == ""){
+            $('#data').html("No Matches");
+        }else{
+            $('#data').html("<ol>" + res_html + "</ol>");
+        }
     });
 </script>
 
