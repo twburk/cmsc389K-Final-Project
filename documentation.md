@@ -7,9 +7,9 @@ Name: Travis Burk
 
 Date: 12/7/2018
 
-Project Topic: 
+Project Topic: Maryland Activities
 
-URL: 
+URL: https://maryland-activities.herokuapp.com/
 
 ---
 
@@ -54,12 +54,16 @@ var request = require("request");
 
 var options = { 
     method: 'POST',
-    url: 'http://localhost:3000/api/...',
+    url: 'https://maryland-activities.herokuapp.com/api/activity'
     headers: { 
-        'content-type': 'application/x-www-form-urlencoded' 
+        'content-type': 'application/json' 
     },
     form: { 
-       ...
+        name : "Filmore",
+	      city : "Silver Springs",
+	      ageRequirement : "No",
+	      maxGroup : "25",
+	      dressCode : ['No Weapons", "No chains on jeans"]
     } 
 };
 
