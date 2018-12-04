@@ -137,7 +137,7 @@ app.post('/activity', function(req, res){
 
 app.post('/api/activity', function(req, res){
     var dressC = req.body.dressCode;
-    var dress = dressC.split(";");
+    //var dress = dressC.split(";");
 
     console.log()
 
@@ -146,7 +146,7 @@ app.post('/api/activity', function(req, res){
         city: req.body.city,
         ageRequirement: req.body.ageRequirement,
         maxGroupCount: parseInt(req.body.maxGroup),
-        dressCode: dress
+        dressCode: dressC
     });
 
     activity.save(function(err){
